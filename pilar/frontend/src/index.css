@@ -1,0 +1,233 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  --tw-scrollbar-bg: #2d2d2d;
+  /* Background color of the scrollbar */
+  --tw-scrollbar-thumb: #e5e5e5;
+  /* Thumb color of the scrollbar */
+  --tw-scrollbar-thumb-hover: #b3b3b3;
+  /* Hover color of the thumb */
+  scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-bg);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background-color: var(--tw-scrollbar-thumb);
+  border-radius: 8px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tw-scrollbar-thumb-hover);
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background-color: var(--tw-scrollbar-bg);
+}
+
+/* En tu archivo CSS de Tailwind */
+/* SHADOW A LOS TEXTOS */
+@layer utilities {
+  .shadowText {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@layer utilities {
+  .scrollbar {
+    --tw-scrollbar-bg: #2d2d2d;
+    /* Background color of the scrollbar */
+    --tw-scrollbar-thumb: #e5e5e5;
+    /* Thumb color of the scrollbar */
+    --tw-scrollbar-thumb-hover: #b3b3b3;
+    /* Hover color of the thumb */
+    scrollbar-color: var(--tw-scrollbar-thumb) var(--tw-scrollbar-bg);
+    scrollbar-width: thin;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--tw-scrollbar-thumb);
+    border-radius: 8px;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: var(--tw-scrollbar-thumb-hover);
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: var(--tw-scrollbar-bg);
+  }
+}
+
+/* BODY PARA MOBILE Y TABLET */
+body {
+  /* Fondo degradado de color */
+  background: #ADC3C5;
+  /* Ajusta el tamaño del fondo para que cubra todo el cuerpo */
+  background-size: cover;
+  /* Otros estilos para el cuerpo */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+}
+
+/* ESTILO PARA EL MODAL  */
+.custom-backdrop {
+  background-color: #3e3838 !important;
+}
+
+.swal2-popup {
+  background-color: #3e3838 !important;
+  color: white;
+}
+
+.botonModalCerrar {
+  background-color: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonModalCerrar:hover {
+  background-color: #ff7875;
+}
+
+.backgroundOpacityBlack {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.error-title {
+  color: red !important;
+}
+
+.error-content {
+  color: white;
+  font-size: 8px;
+  line-height: 1.5;
+}
+
+.error-link {
+  color: cyan !important;
+  text-decoration: underline;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.726);
+  /* Fondo blanco con opacidad */
+  z-index: 999;
+  /* Asegura que esté encima de todo */
+}
+
+.custom-modal-alert {
+  width: 50vh !important;
+  /* Ancho personalizado */
+  height: 60vh !important;
+  /* Altura personalizada */
+}
+
+.custom-modal-alert .swal2-icon {
+  font-size: 48px !important;
+  /* Ajusta el tamaño del icono */
+}
+
+.custom-modal-alert .swal2-title {
+  font-size: 12px !important;
+  /* Ajusta el tamaño del título */
+}
+
+.custom-modal-alert .swal2-content {
+  font-size: 12px !important;
+  /* Ajusta el tamaño del contenido */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+
+/* FUENTES */
+/* AGREGAR /static/ para produccion */
+@font-face {
+  font-family: "Gotham Black";
+  src: url(/fonts/Gotham-Black.otf) format("opentype");
+  font-weight: bold;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: "Gotham Medium";
+  src: url(/fonts/Gotham-Medium.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: url(/fonts/Gotham-Book.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* MAS FUERTE */
+.textGothamBlack {
+  font-family: "Gotham Black";
+}
+
+/* SEGUNDO MAS FUERTE */
+.textGothamMedium {
+  font-family: "Gotham Medium";
+}
+
+/* TERCERO MAS FUERTE */
+.textGothamBook {
+  font-family: "Gotham Book";
+}
